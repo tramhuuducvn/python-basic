@@ -1,35 +1,16 @@
 import cv2
 
-path = r"./pitbull.jpg"
+pathA = r"./image/img_a.png"
+pathB = r"./image/img_b.png"
 
-image = cv2.imread(path)
-cv2.imshow("tai anh", image)
-cv2.imwrite("pitpull-so-cute.png", image)
+imageA = cv2.imread(pathA)
+imageB = cv2.imread(pathB)
 
-# cv2.waitKey()
-B, R, G = cv2.split(image)
-cv2.imshow("B", B)
-cv2.imshow("G", G)
-cv2.imshow("R", R)
-cv2.waitKey()
+imageC = cv2.bitwise_and(imageB, imageA, mask=None)
 
+cv2.imshow("imageA", imageA)
+cv2.imshow("imageB", imageB)
+cv2.imshow("imageC", imageC)
 
-def sayHello(name: str) -> str:
-    message: str = "Hello " + name
-    return message
-
-
-class Student:
-    name: str
-    age: int
-
-    def __init__(self, name: str, age: int):
-        self.name = name
-        self.age = age
-
-    def __str__(self) -> str:
-        return self.name + " is " + str(self.age) + " years old"
-
-
-student: Student = Student("DUC", 2)
-print("hello {0} {1}".format(9, 20))
+if cv2.waitKey(0) & 0xFF == 27:
+    cv2.destroyAllWindows()
