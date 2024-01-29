@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["imread", "imshow", "imwrite", "pitbull", "pitpull"]
+  "cSpell.words": [
+    "cmap",
+    "dtype",
+    "imread",
+    "imshow",
+    "imwrite",
+    "pitbull",
+    "pitpull"
+  ]
 }
