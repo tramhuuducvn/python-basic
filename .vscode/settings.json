@@ -6,6 +6,7 @@
     "imshow",
     "imwrite",
     "pitbull",
-    "pitpull"
+    "pitpull",
+    "pytesseract"
   ]
 }
