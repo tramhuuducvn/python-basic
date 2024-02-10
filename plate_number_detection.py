@@ -18,11 +18,8 @@ from easyocr import Reader
 import cv2
 
 # loading images and resizing
-img = cv2.imread(r'./image/image5.jpg')
+img = cv2.imread(r'./images/image5.jpg')
 img = cv2.resize(img, (800, 600))
-# load font
-fontpath = "./arial.ttf"
-font = ImageFont.truetype(fontpath, 32)
 b,g,r,a = 0,255,0,0
 # making the image grayscale
 grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -49,21 +46,17 @@ reader = Reader(['en'])
 detection = reader.readtext(number_plate)
 
 if len(detection) == 0:
-    text = "Không thấy bảng số xe"
-    img_pil = Image.fromarray(img) #image biến lấy khung hình từ webcam
-    draw = ImageDraw.Draw(img_pil)
-    draw.text((150, 500), text, font = font, fill = (b, g, r, a))
-    img = np.array(img_pil) #hiển thị ra window
-    #cv2.putText(img, text, (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 3)
-    cv2.waitKey(0)
+    text = "Cannot detect plate number"
+    print(text)
 else:
     cv2.drawContours(img, [number_plate_shape], -1, (255, 0, 0), 3)
     text ="Biển số: " + f"{detection[0][1]}"
     img_pil = Image.fromarray(img) #image biến lấy khung hình từ webcam
     draw = ImageDraw.Draw(img_pil)
-    draw.text((200, 500), text, font = font, fill = (b, g, r, a))
+    # draw.text((200, 500), text, _, fill = (b, g, r, a))
     img = np.array(img_pil) #hiển thị ra window
     #cv2.putText(img, text, (x, y - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 0, 0), 2)
     cv2.imshow('Plate Detection', img)
+    print(text)
     cv2.waitKey(0)
     #cv2.waitKey(5)

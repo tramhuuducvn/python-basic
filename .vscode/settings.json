@@ -2,11 +2,13 @@
   "cSpell.words": [
     "cmap",
     "dtype",
+    "easyocr",
     "imread",
     "imshow",
     "imwrite",
     "pitbull",
     "pitpull",
-    "pytesseract"
+    "pytesseract",
+    "readtext"
   ]
 }
