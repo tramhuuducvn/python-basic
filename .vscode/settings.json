@@ -1,11 +1,14 @@
 {
   "cSpell.words": [
     "cmap",
+    "customtkinter",
     "dtype",
     "easyocr",
     "imread",
     "imshow",
     "imwrite",
+    "padx",
+    "pady",
     "pitbull",
     "pitpull",
     "pytesseract",
