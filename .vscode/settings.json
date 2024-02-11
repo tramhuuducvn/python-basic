@@ -3,6 +3,7 @@
     "cmap",
     "columnspan",
     "customtkinter",
+    "dobermann",
     "dtype",
     "easyocr",
     "imread",

@@ -13,9 +13,9 @@ class Application(customtkinter.CTk):
         # self.grid_rowconfigure(0, weight=1)
         
         # add header
-        self.header = customtkinter.CTkFrame(self, width=window.width, height=40, fg_color="transparent")
+        self.header = customtkinter.CTkFrame(self, width=window.width, height=50, fg_color="transparent")
         # back button
-        self.back_btn = customtkinter.CTkButton(self.header, text="Back", command=self.back)
+        self.back_btn = customtkinter.CTkButton(self.header, text="<<<  Back", command=self.back)
         self.back_btn.grid(row=0, column=0)
         
         self.show_start_page()

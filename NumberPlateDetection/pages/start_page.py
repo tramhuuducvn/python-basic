@@ -19,11 +19,11 @@ class Frame(customtkinter.CTkFrame):
         image_label.grid(row = 0, column = 0, columnspan = 2 ,sticky="NSEW")
         
         # OPTION 1
-        img_button = customtkinter.CTkButton(self, text="STORED IMAGES", width=window.width/2, height=100, command=self.choose_image, border_width=4, border_color="white")
+        img_button = customtkinter.CTkButton(self, text="STORED IMAGES", width=window.width/2, height=100, command=self.choose_image, border_width=4, border_color="white", font=("ubuntu", 20))
         img_button.grid(row = 1, column = 0)
         
         # OPTION 2
-        img_button = customtkinter.CTkButton(self, text="CAMERA", width=window.width/2, height=100, command=self.choose_camera, border_width=4, border_color="white")
+        img_button = customtkinter.CTkButton(self, text="CAMERA", width=window.width/2, height=100, command=self.choose_camera, border_width=4, border_color="white", font=("ubuntu", 20))
         img_button.grid(row = 1, column = 1)
                
     
