@@ -1,0 +1,1 @@
+welcome = r"./assets/images/welcome.jpg"
